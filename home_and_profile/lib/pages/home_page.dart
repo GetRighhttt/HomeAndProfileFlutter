@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:home_and_profile/pages/row_widget.dart';
 
+// constants
+final Color greyShadeColor = Colors.grey.shade100;
+const double rowPadding = 8.0;
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -25,7 +29,7 @@ class HomePage extends StatelessWidget {
         primary: true,
         centerTitle: true,
         elevation: 4,
-        shadowColor: Colors.lightBlue,
+        shadowColor: greyShadeColor,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(
@@ -35,33 +39,48 @@ class HomePage extends StatelessWidget {
           children: [
             RowItem(
               'assets/app.png',
+              'assets/socials.png',
+              greyShadeColor,
+              rowPadding,
+              'App',
+              'Socials',
+              'Description',
+            ),
+            RowItem(
+              'assets/space.png',
+              'assets/rocket.png',
+              greyShadeColor,
+              rowPadding,
+              'Space',
+              'Rocket',
+              'Description',
+            ),
+            RowItem(
               'assets/cactus.png',
-              Colors.grey.shade100,
-              8.0,
+              'assets/travel.png',
+              greyShadeColor,
+              rowPadding,
+              'Cactus',
+              'Travels',
+              'Description',
             ),
             RowItem(
               'assets/door.png',
-              'assets/rocket.png',
-              Colors.grey.shade100,
-              8.0,
-            ),
-            RowItem(
-              'assets/socials.png',
-              'assets/space.png',
-              Colors.grey.shade100,
-              8.0,
-            ),
-            RowItem(
-              'assets/travel.png',
               'assets/web.png',
-              Colors.grey.shade100,
-              8.0,
+              greyShadeColor,
+              rowPadding,
+              'Door',
+              'Web',
+              'Description',
             ),
             RowItem(
               'assets/yeah.png',
-              'assets/app.png',
-              Colors.grey.shade100,
-              8.0,
+              'assets/yeah.png',
+              greyShadeColor,
+              rowPadding,
+              'Yeah',
+              'Yeah',
+              'Description',
             )
           ],
         ),
