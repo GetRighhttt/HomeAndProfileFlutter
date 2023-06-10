@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_and_profile/pages/row_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,17 +27,44 @@ class HomePage extends StatelessWidget {
         elevation: 4,
         shadowColor: Colors.lightBlue,
       ),
-      body: const Column(
-        children: [
-          Card(
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Hello world',
-              ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(
+          10,
+        ),
+        child: Column(
+          children: [
+            RowItem(
+              'assets/app.png',
+              'assets/cactus.png',
+              Colors.grey.shade100,
+              8.0,
             ),
-          )
-        ],
+            RowItem(
+              'assets/door.png',
+              'assets/rocket.png',
+              Colors.grey.shade100,
+              8.0,
+            ),
+            RowItem(
+              'assets/socials.png',
+              'assets/space.png',
+              Colors.grey.shade100,
+              8.0,
+            ),
+            RowItem(
+              'assets/travel.png',
+              'assets/web.png',
+              Colors.grey.shade100,
+              8.0,
+            ),
+            RowItem(
+              'assets/yeah.png',
+              'assets/app.png',
+              Colors.grey.shade100,
+              8.0,
+            )
+          ],
+        ),
       ),
     );
   }
