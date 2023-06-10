@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:home_and_profile/core/constants.dart';
 
@@ -42,6 +40,34 @@ class DescriptionPage extends StatelessWidget {
           children: [
             Image.asset(
               imageVariable,
+            ),
+            Wrap(
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Text Button',
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Elevated Button',
+                  ),
+                ),
+                FilledButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Filled Button',
+                  ),
+                ),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Floating Button',
+                  ),
+                ),
+              ],
             ),
             FittedBox(
               fit: BoxFit.contain,
