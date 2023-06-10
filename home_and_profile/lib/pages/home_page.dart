@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
               'assets/socials.png',
               greyShadeColor,
               rowPadding,
-              'App',
+              'Apps',
               'Socials',
               'Description',
             ),

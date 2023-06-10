@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:home_and_profile/pages/description_page.dart';
 
@@ -22,7 +23,13 @@ class CardWidget extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const DescriptionPage();
+              return DescriptionPage(
+                paddingVal,
+                color,
+                imageVariable,
+                title,
+                description,
+              );
             },
             allowSnapshotting: true,
           ),
