@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_and_profile/pages/row_widget.dart';
+import 'package:home_and_profile/widgets/row_widget.dart';
 
 // constants
 final Color greyShadeColor = Colors.grey.shade100;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_and_profile/pages/card_widget.dart';
+import 'package:home_and_profile/widgets/card_widget.dart';
 
 class RowItem extends StatelessWidget {
   const RowItem(this.imageOneName, this.imageTwoName, this.color,
