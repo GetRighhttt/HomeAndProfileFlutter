@@ -68,6 +68,7 @@ class DescriptionPage extends StatelessWidget {
                 ),
                 FloatingActionButton(
                   onPressed: () {},
+                  elevation: 4,
                   child: const Text(
                     'Floating Button',
                   ),
