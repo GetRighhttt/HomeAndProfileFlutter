@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_and_profile/core/constants.dart';
 
-class DescriptionPage extends StatelessWidget {
+class DescriptionPage extends StatefulWidget {
   const DescriptionPage(this.paddingVal, this.color, this.imageVariable,
       this.title, this.description,
       {super.key});
@@ -13,10 +13,17 @@ class DescriptionPage extends StatelessWidget {
   final String description;
 
   @override
+  State<DescriptionPage> createState() => _DescriptionPageState();
+}
+
+class _DescriptionPageState extends State<DescriptionPage> {
+  double fontSizeCustom = 25;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(widget.title),
         automaticallyImplyLeading: true,
         primary: true,
         elevation: 4,
@@ -39,14 +46,21 @@ class DescriptionPage extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              imageVariable,
+              widget.imageVariable,
             ),
             Wrap(
+              spacing: 15,
               children: [
                 TextButton(
                   onPressed: () {},
                   child: const Text(
-                    'Text Button',
+                    'Extra Small',
+                  ),
+                ),
+                OutlinedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Small',
                   ),
                 ),
                 ElevatedButton(
@@ -57,30 +71,33 @@ class DescriptionPage extends StatelessWidget {
                   ),
                   onPressed: () {},
                   child: const Text(
-                    'Elevated Button',
+                    'Medium',
                   ),
                 ),
                 FilledButton(
                   onPressed: () {},
                   child: const Text(
-                    'Filled Button',
+                    'Large',
                   ),
                 ),
                 FloatingActionButton(
                   onPressed: () {},
                   elevation: 4,
                   child: const Text(
-                    'Floating Button',
+                    'Extra Large',
                   ),
                 ),
               ],
             ),
+            const SizedBox(
+              height: 15,
+            ),
             FittedBox(
               fit: BoxFit.contain,
               child: Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 20,
+                widget.title,
+                style: TextStyle(
+                  fontSize: fontSizeCustom,
                   fontWeight: FontWeight.w500,
                   fontStyle: FontStyle.italic,
                 ),
