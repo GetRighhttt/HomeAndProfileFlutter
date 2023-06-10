@@ -50,6 +50,11 @@ class DescriptionPage extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
+                  style: const ButtonStyle(
+                    elevation: MaterialStatePropertyAll(
+                      10,
+                    ),
+                  ),
                   onPressed: () {},
                   child: const Text(
                     'Elevated Button',
