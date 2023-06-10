@@ -13,6 +13,16 @@ class DescriptionPage extends StatelessWidget {
         centerTitle: true,
         elevation: 4,
         shadowColor: Colors.grey.shade100,
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.save,
+            ),
+            onPressed: () {
+              // provide action method
+            },
+          ),
+        ],
       ),
     );
   }

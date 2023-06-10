@@ -18,7 +18,9 @@ class HomePage extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: const Icon(Icons.menu),
+              icon: const Icon(
+                Icons.menu,
+              ),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
@@ -26,6 +28,16 @@ class HomePage extends StatelessWidget {
             );
           },
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.settings,
+            ),
+            onPressed: () {
+              // do something
+            },
+          )
+        ],
         primary: true,
         centerTitle: true,
         elevation: 4,
