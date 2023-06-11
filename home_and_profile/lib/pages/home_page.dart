@@ -58,8 +58,8 @@ class HomePage extends StatelessWidget {
         elevation: 4,
         shadowColor: greyShadeColor,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(
           10,
         ),
         child: Column(
@@ -67,7 +67,6 @@ class HomePage extends StatelessWidget {
             RowItem(
               'assets/app.png',
               'assets/socials.png',
-              greyShadeColor,
               rowPadding,
               'Apps',
               'Socials',
@@ -76,7 +75,6 @@ class HomePage extends StatelessWidget {
             RowItem(
               'assets/space.png',
               'assets/rocket.png',
-              greyShadeColor,
               rowPadding,
               'Space',
               'Rocket',
@@ -85,7 +83,6 @@ class HomePage extends StatelessWidget {
             RowItem(
               'assets/cactus.png',
               'assets/travel.png',
-              greyShadeColor,
               rowPadding,
               'Cactus',
               'Travels',
@@ -94,7 +91,6 @@ class HomePage extends StatelessWidget {
             RowItem(
               'assets/door.png',
               'assets/web.png',
-              greyShadeColor,
               rowPadding,
               'Door',
               'Web',
@@ -103,7 +99,6 @@ class HomePage extends StatelessWidget {
             RowItem(
               'assets/yeah.png',
               'assets/yeah.png',
-              greyShadeColor,
               rowPadding,
               'Yeah',
               'Yeah',
@@ -113,7 +108,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blueAccent.shade100,
+        backgroundColor: Colors.blue.shade300,
         elevation: 10,
         onPressed: () {
           isDarkNotifier.value = !isDarkNotifier.value;

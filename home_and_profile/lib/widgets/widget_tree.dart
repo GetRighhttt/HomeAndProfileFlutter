@@ -30,6 +30,7 @@ class _Widget3State extends State<Widget3> {
         currentPage,
       ), // show home page in body
       bottomNavigationBar: NavigationBar(
+        indicatorColor: Colors.blue.shade300,
         destinations: const [
           // setting list for navigation bar
           NavigationDestination(
