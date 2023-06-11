@@ -10,7 +10,6 @@ class SavedPage extends StatelessWidget {
         title: const Text(
           'Saved',
         ),
-        centerTitle: true,
         elevation: 4,
         actions: [
           IconButton(
@@ -64,8 +63,14 @@ class SavedPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 100,
+            ),
+            const Align(
+              alignment: Alignment.center,
+            ),
             Image.asset(
-              'assets/cactus.png',
+              'assets/socials.png',
             ),
           ],
         ),

@@ -10,7 +10,6 @@ class SettingsPage extends StatelessWidget {
         title: const Text(
           'Settings',
         ),
-        centerTitle: true,
         elevation: 4,
         actions: [
           IconButton(
@@ -64,6 +63,12 @@ class SettingsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 100,
+            ),
+            const Align(
+              alignment: Alignment.center,
+            ),
             Image.asset('assets/app.png'),
           ],
         ),

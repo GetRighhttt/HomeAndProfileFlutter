@@ -12,6 +12,17 @@ class ProfilePage extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 4,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.refresh,
+              ),
+              onPressed: () {},
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
         actions: [
           IconButton(
             icon: const Icon(
@@ -79,7 +90,55 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            ListTile(),
+            ListTile(
+              selectedTileColor: Colors.blue,
+              leading: Icon(
+                Icons.person_2_outlined,
+              ),
+              title: Text(
+                'Stefan',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.email,
+              ),
+              title: Text(
+                'stefanbusiness95@gmail.com',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.streetview,
+              ),
+              title: Text(
+                '1234 Nonya business Tampa, FL 33647',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.work,
+              ),
+              title: Text(
+                'Software Engineer',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
           ],
         ),
       ),
