@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:home_and_profile/core/notifiers.dart';
+import 'package:home_and_profile/widgets/floating_button_widget.dart';
+import 'package:home_and_profile/widgets/navigation_drawer_widget.dart';
 import 'package:home_and_profile/widgets/row_widget.dart';
+import 'package:home_and_profile/widgets/widget_tree.dart';
 
 // constants
 final Color greyShadeColor = Colors.grey.shade100;
@@ -15,17 +19,6 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Home',
-        ),
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(
-                Icons.menu,
-              ),
-              onPressed: () {},
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
-          },
         ),
         actions: [
           IconButton(
@@ -58,6 +51,7 @@ class HomePage extends StatelessWidget {
         elevation: 4,
         shadowColor: greyShadeColor,
       ),
+      drawer: const NavigationDrawerWidget(),
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(
           10,
@@ -107,25 +101,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue.shade300,
-        elevation: 10,
-        onPressed: () {
-          isDarkNotifier.value = !isDarkNotifier.value;
-        }, // use listener to change icon
-        child: ValueListenableBuilder(
-          valueListenable: isDarkNotifier,
-          builder: (context, isDark, child) {
-            if (!isDark) {
-              // if light mode is showing, show dark mode when selected
-              return const Icon(Icons.dark_mode);
-            } else {
-              // if isDark is showing, show light mode when selected
-              return const Icon(Icons.light_mode);
-            }
-          },
-        ),
-      ),
+      floatingActionButton: const FloatingButtonWidget(),
     );
   }
 }
