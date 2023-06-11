@@ -18,6 +18,7 @@ class DescriptionPage extends StatefulWidget {
 
 class _DescriptionPageState extends State<DescriptionPage> {
   double fontSizeCustom = 25;
+  double fontSizeRandomText = 14;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,42 @@ class _DescriptionPageState extends State<DescriptionPage> {
               Icons.save,
             ),
             onPressed: () {
-              // provide action method
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 1000,
+                    color: Colors.blueAccent.shade200,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Text(
+                            'Save Information?',
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: const ButtonStyle(
+                              elevation: MaterialStatePropertyAll(
+                                10,
+                              ),
+                              shadowColor:
+                                  MaterialStatePropertyAll(Colors.white),
+                            ),
+                            child: const Text('Close BottomSheet'),
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
             },
           ),
         ],
@@ -52,13 +88,23 @@ class _DescriptionPageState extends State<DescriptionPage> {
               spacing: 15,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      fontSizeCustom = 10;
+                      fontSizeRandomText = 9;
+                    });
+                  },
                   child: const Text(
                     'Extra Small',
                   ),
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      fontSizeCustom = 15;
+                      fontSizeRandomText = 11;
+                    });
+                  },
                   child: const Text(
                     'Small',
                   ),
@@ -69,19 +115,34 @@ class _DescriptionPageState extends State<DescriptionPage> {
                       10,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      fontSizeCustom = 20;
+                      fontSizeRandomText = 14;
+                    });
+                  },
                   child: const Text(
                     'Medium',
                   ),
                 ),
                 FilledButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      fontSizeCustom = 40;
+                      fontSizeRandomText = 20;
+                    });
+                  },
                   child: const Text(
                     'Large',
                   ),
                 ),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      fontSizeCustom = 80;
+                      fontSizeRandomText = 40;
+                    });
+                  },
                   elevation: 4,
                   child: const Text(
                     'Extra Large',
@@ -103,28 +164,28 @@ class _DescriptionPageState extends State<DescriptionPage> {
                 ),
               ),
             ),
-            const Text(
+            Text(
               randomString,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: fontSizeRandomText,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.italic,
               ),
               textAlign: TextAlign.justify,
             ),
-            const Text(
+            Text(
               randomString,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: fontSizeRandomText,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.italic,
               ),
               textAlign: TextAlign.justify,
             ),
-            const Text(
+            Text(
               randomString,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: fontSizeRandomText,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.italic,
               ),
