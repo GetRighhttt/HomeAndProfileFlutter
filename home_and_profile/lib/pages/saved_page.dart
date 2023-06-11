@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class SavedPage extends StatelessWidget {
+  const SavedPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Profile',
+            'Saved',
           ),
           centerTitle: true,
           elevation: 4,
           actions: [
             IconButton(
               icon: const Icon(
-                Icons.share,
+                Icons.remove_circle_outline,
               ),
               onPressed: () {
                 showModalBottomSheet<void>(
@@ -30,7 +30,7 @@ class ProfilePage extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             const Text(
-                              'Share something with friends?',
+                              'Remove from Saved Page?',
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.w500,

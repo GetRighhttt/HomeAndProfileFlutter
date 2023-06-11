@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_and_profile/pages/home_page.dart';
 import 'package:home_and_profile/pages/profile_page.dart';
+import 'package:home_and_profile/pages/saved_page.dart';
+import 'package:home_and_profile/pages/settings_pages.dart';
 
 // showing this widget to implement the bottom navigation bar
 class Widget3 extends StatefulWidget {
@@ -14,11 +16,19 @@ class Widget3 extends StatefulWidget {
 // is being displayed
 class _Widget3State extends State<Widget3> {
   int currentPage = 0;
+  List<Widget> pages = const [
+    HomePage(),
+    ProfilePage(),
+    SettingsPage(),
+    SavedPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const ProfilePage(), // show home page in body
+      body: pages.elementAt(
+        currentPage,
+      ), // show home page in body
       bottomNavigationBar: NavigationBar(
         destinations: const [
           // setting list for navigation bar
