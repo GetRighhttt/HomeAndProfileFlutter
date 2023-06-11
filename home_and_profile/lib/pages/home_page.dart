@@ -117,9 +117,18 @@ class HomePage extends StatelessWidget {
         elevation: 10,
         onPressed: () {
           isDarkNotifier.value = !isDarkNotifier.value;
-        },
-        child: const Icon(
-          Icons.dark_mode,
+        }, // use listener to change icon
+        child: ValueListenableBuilder(
+          valueListenable: isDarkNotifier,
+          builder: (context, isDark, child) {
+            if (!isDark) {
+              // if light mode is showing, show dark mode when selected
+              return const Icon(Icons.dark_mode);
+            } else {
+              // if isDark is showing, show light mode when selected
+              return const Icon(Icons.light_mode);
+            }
+          },
         ),
       ),
     );

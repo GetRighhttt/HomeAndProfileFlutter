@@ -84,7 +84,7 @@ class ProfilePage extends StatelessWidget {
             CircleAvatar(
               radius: 100,
               backgroundImage: AssetImage(
-                'assets/yeah.png',
+                'assets/stefan_picture.png',
               ),
             ),
             SizedBox(
@@ -133,6 +133,18 @@ class ProfilePage extends StatelessWidget {
               ),
               title: Text(
                 'Software Engineer',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.link,
+              ),
+              title: Text(
+                'https://github.com/getrighhttt',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
