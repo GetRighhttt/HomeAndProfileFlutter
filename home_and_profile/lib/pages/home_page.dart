@@ -21,9 +21,7 @@ class HomePage extends StatelessWidget {
               icon: const Icon(
                 Icons.menu,
               ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
+              onPressed: () {},
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
@@ -34,7 +32,23 @@ class HomePage extends StatelessWidget {
               Icons.settings,
             ),
             onPressed: () {
-              // do something
+              showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: const Text('Settings Button'),
+                  content: const Text('Settings description'),
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'Cancel'),
+                      child: const Text('Cancel'),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'OK'),
+                      child: const Text('OK'),
+                    ),
+                  ],
+                ),
+              );
             },
           )
         ],
