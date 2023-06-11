@@ -32,7 +32,7 @@ class _DescriptionPageState extends State<DescriptionPage> {
         actions: [
           IconButton(
             icon: const Icon(
-              Icons.save,
+              Icons.save_alt,
             ),
             onPressed: () {
               showModalBottomSheet<void>(
@@ -53,6 +53,9 @@ class _DescriptionPageState extends State<DescriptionPage> {
                               fontWeight: FontWeight.w500,
                               fontStyle: FontStyle.italic,
                             ),
+                          ),
+                          const SizedBox(
+                            height: 35,
                           ),
                           ElevatedButton(
                             style: const ButtonStyle(

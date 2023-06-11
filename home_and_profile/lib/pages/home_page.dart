@@ -29,14 +29,14 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(
-              Icons.settings,
+              Icons.add_a_photo,
             ),
             onPressed: () {
               showDialog<String>(
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
-                  title: const Text('Settings Button'),
-                  content: const Text('Settings description'),
+                  title: const Text('Add Photo?'),
+                  content: const Text('Would you like to add a photo?'),
                   actions: <Widget>[
                     TextButton(
                       onPressed: () => Navigator.pop(context, 'Cancel'),
