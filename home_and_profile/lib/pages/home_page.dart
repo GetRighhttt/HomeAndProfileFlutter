@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:home_and_profile/core/notifiers.dart';
 import 'package:home_and_profile/widgets/floating_button_widget.dart';
 import 'package:home_and_profile/widgets/navigation_drawer_widget.dart';
 import 'package:home_and_profile/widgets/row_widget.dart';
-import 'package:home_and_profile/widgets/widget_tree.dart';
 
 // constants
 final Color greyShadeColor = Colors.grey.shade100;
@@ -26,6 +23,7 @@ class HomePage extends StatelessWidget {
               Icons.add_a_photo,
             ),
             onPressed: () {
+              // creating Material Dialog
               showDialog<String>(
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
@@ -51,7 +49,7 @@ class HomePage extends StatelessWidget {
         elevation: 4,
         shadowColor: greyShadeColor,
       ),
-      drawer: const NavigationDrawerWidget(),
+      drawer: const NavigationDrawerWidget(), // NavigationDrawerWidget
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(
           10,
@@ -101,6 +99,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      // FloatingActionButton (Light/Dark) Widget
       floatingActionButton: const FloatingButtonWidget(),
     );
   }
