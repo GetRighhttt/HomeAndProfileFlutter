@@ -37,6 +37,13 @@ class _DescriptionPageState extends State<DescriptionPage> {
             onPressed: () {
               showModalBottomSheet<void>(
                 context: context,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(
+                      25.0,
+                    ),
+                  ),
+                ),
                 builder: (BuildContext context) {
                   return Container(
                     height: 1000,
