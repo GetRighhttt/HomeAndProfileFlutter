@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:home_and_profile/core/constants.dart';
 
 class DescriptionPage extends StatefulWidget {
-  const DescriptionPage(this.paddingVal, this.color, this.imageVariable,
-      this.title, this.description,
+  const DescriptionPage(
+      this.paddingVal, this.imageVariable, this.title, this.description,
       {super.key});
 
   final double paddingVal;
-  final Color color;
   final String imageVariable;
   final String title;
   final String description;

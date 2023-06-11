@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_and_profile/core/notifiers.dart';
 import 'package:home_and_profile/widgets/row_widget.dart';
 
 // constants
@@ -109,6 +110,16 @@ class HomePage extends StatelessWidget {
               'Description',
             )
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blueAccent.shade100,
+        elevation: 10,
+        onPressed: () {
+          isDarkNotifier.value = !isDarkNotifier.value;
+        },
+        child: const Icon(
+          Icons.dark_mode,
         ),
       ),
     );

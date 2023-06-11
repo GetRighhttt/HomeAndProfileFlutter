@@ -4,12 +4,11 @@ import 'package:home_and_profile/pages/description_page.dart';
 const double boxHeight = 5;
 
 class CardWidget extends StatelessWidget {
-  const CardWidget(this.paddingVal, this.color, this.imageVariable, this.title,
-      this.description,
+  const CardWidget(
+      this.paddingVal, this.imageVariable, this.title, this.description,
       {super.key});
 
   final double paddingVal;
-  final Color color;
   final String imageVariable;
   final String title;
   final String description;
@@ -24,7 +23,6 @@ class CardWidget extends StatelessWidget {
             builder: (context) {
               return DescriptionPage(
                 paddingVal,
-                color,
                 imageVariable,
                 title,
                 description,
@@ -39,7 +37,6 @@ class CardWidget extends StatelessWidget {
           padding: EdgeInsets.all(
             paddingVal,
           ),
-          color: color,
           child: Column(
             children: [
               const SizedBox(

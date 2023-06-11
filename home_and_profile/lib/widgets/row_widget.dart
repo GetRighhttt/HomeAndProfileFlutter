@@ -21,7 +21,6 @@ class RowItem extends StatelessWidget {
         Expanded(
           child: CardWidget(
             paddingValue,
-            color,
             imageOneName,
             imageOneText,
             description,
@@ -30,7 +29,6 @@ class RowItem extends StatelessWidget {
         Expanded(
           child: CardWidget(
             paddingValue,
-            color,
             imageTwoName,
             imageTwoText,
             description,
